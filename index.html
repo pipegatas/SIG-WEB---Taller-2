@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Programacion en SIG utilizando Leaflet </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" type="text/css" href="https://rawgit.com/MarcChasse/leaflet.ScaleFactor/master/leaflet.scalefactor.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js" integrity="sha512-Abr21JO2YqcJ03XGZRPuZSWKBhJpUAR6+2wH5zBeO4wAw4oksr8PRdF+BKIRsxvCdq+Mv4670rZ+dLnIyabbGw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.EasyButton/2.4.0/easy-button.css" />
+	<link rel="stylesheet" href="./posición/dist/L.Control.Locate.min.css" />
+	 <link rel="stylesheet" href="./geocodificar/l.geosearch.css" />
+
+    <script src="https://npmcdn.com/jquery@3.0.0/dist/jquery.min.js"></script>
+    <script src="https://npmcdn.com/leaflet@1.0.0-rc.1/dist/leaflet.js"></script>
+    <script src="https://rawgit.com/MarcChasse/leaflet.ScaleFactor/master/leaflet.scalefactor.min.js"></script>
+     
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.EasyButton/2.4.0/easy-button.js"></script>
+    <script src="./posición/src/L.Control.Locate.js" ></script>
+    <script src="https://kit.fontawesome.com/02eb88b373.js" crossorigin="anonymous"></script>
+ 
+    <script src="./geocodificar/l.control.geosearch.js"></script>
+    <script src="./geocodificar/l.geosearch.provider.esri.js"></script>
+     
+    <link rel="stylesheet" href="./minimap/Control.MiniMap.css" />
+    <script src="./minimap/Control.MiniMap.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1 class = "title"> Arboles notables</h1>
+    <p> Los Arboles Notables son aquellos individuos arbóreos que han adquirido un reconocimiento de la comunidad por su porte, tamaño, volumen, longevidad, valores escénicos, importancia botánica
+         o representan puntos de referencia e identidad para la ciudad, los cuales han sido integrados al paisaje urbano a través de la historia y revisten importancia desde el punto de vista ambiental, 
+         paisajístico, urbanístico, estético o afectivo (Acuerdo 0373 de 2014 - POT). Se resalta que en futuros proyectos el DAGMA como autoridad ambiental de la zona urbana robustecerá el inventario de 
+         arboles notables, ya que la información cargada a esta plataforma contiene solo una fracción de los arboles notables de la ciudad y esta por identificar y censar los restantes.
+        </p>
+
+    <a href="http://datos.cali.gov.co/dataset/arboles-notables-en-santiago-de-cali" class="btn">Saber mas</a>
+    <article class="contain">
+        <h2 class="title"> Atencion al ciudadano</h2>
+        <a href="https://www.cali.gov.co/participacion/publicaciones/136949/canales-de-atencion-al-ciudadano/" class="btn">Contacto</a> 
+    </article>
+     
+    
+
+    <div id="Contenedor"> 
+        <div id="norte" style="z-index:0">
+            <img id="norte" src="norte.png" style="z-index:9999" ></img>
+            <input id="seleccionar_color" type="color" style="z-index:9999">
+        </div>
+    </div>
+
+
+
+
+    <script src="index.js"></script>
+    <script src="./data/localidades.js"></script>
+    <script src="./data/San_Cali.js"></script>
+    <script src="./data/arboles_com10.js"></script>
+    <script src="./data/comuna10.js"></script>
+    <script src="heat.js"></script>
+</body>
+</html>
